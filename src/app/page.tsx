@@ -1,6 +1,11 @@
+import Slider from "<gboutique>/components/Slider";
+
 const HomePage = () => {
   return (
-    <div className=''>HomePage</div>
+    <div className=''>
+      <Slider/>
+    
+    </div>
   )
 }
 
