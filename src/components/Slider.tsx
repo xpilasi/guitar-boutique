@@ -18,7 +18,7 @@ const slides = [
         id: 2,
         title: 'Monster Pedal',
         description: 'Awesome Tesla Overdrive',
-        img:'https://images.pexels.com/photos/18464648/pexels-photo-18464648/free-photo-of-taza-copa-beber-bebida.jpeg?auto=compress&cs=tinysrgb&w=400',
+        img:'https://images.pexels.com/photos/327556/pexels-photo-327556.jpeg?auto=compress&cs=tinysrgb&w=400',
         url:'/',
         bg:'bg-gradient-to-r from-green-50 to-purple-50'
 
@@ -39,15 +39,15 @@ const Slider = () => {
     const [currentSlide,setCurrentSlide] = useState(0);
 
     // movimiento slider independiente:
-    useEffect(()=>{
-        const interval = setInterval(()=>{
-            setCurrentSlide(prev=>(prev === slides.length-1 ? 0 : prev + 1))
-        },3000);
+    // useEffect(()=>{
+    //     const interval = setInterval(()=>{
+    //         setCurrentSlide(prev=>(prev === slides.length-1 ? 0 : prev + 1))
+    //     },3000);
 
-        return ()=> clearInterval(interval);
+    //     return ()=> clearInterval(interval);
 
         
-    },[])
+    // },[])
   return (
     <div className='h-[calc(100vh-80px)] overflow-hidden bg-red-300'>
         <div 
