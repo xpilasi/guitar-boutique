@@ -9,7 +9,7 @@ const slides = [
         id: 1,
         title: 'Marshall V12',
         description: 'New arrivals',
-        img:'https://images.pexels.com/photos/18464648/pexels-photo-18464648/free-photo-of-taza-copa-beber-bebida.jpeg?auto=compress&cs=tinysrgb&w=400',
+        img:'https://images.unsplash.com/photo-1621173425760-24b37d0137f1?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         url:'/',
         bg:'bg-gradient-to-r from-yellow-50 to-pink-50'
 
@@ -18,7 +18,7 @@ const slides = [
         id: 2,
         title: 'Monster Pedal',
         description: 'Awesome Tesla Overdrive',
-        img:'https://images.pexels.com/photos/327556/pexels-photo-327556.jpeg?auto=compress&cs=tinysrgb&w=400',
+        img:'https://images.unsplash.com/photo-1662261896010-06131f684139?q=80&w=1403&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         url:'/',
         bg:'bg-gradient-to-r from-green-50 to-purple-50'
 
@@ -27,7 +27,7 @@ const slides = [
         id: 3,
         title: 'Get it Now',
         description: 'Great Bass',
-        img:'https://images.pexels.com/photos/26804147/pexels-photo-26804147/free-photo-of-jugando-musica-musico-concierto.jpeg?auto=compress&cs=tinysrgb&w=400',
+        img:'https://images.unsplash.com/photo-1614440401589-488fd69a3f8a?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         url:'/',
         bg:'bg-gradient-to-r from-blue-700 to-black-50'
 
