@@ -14,7 +14,7 @@ const   [open,setOpen] = useState(false);
             alt='' width={28} height={28} 
             onClick={()=>setOpen((prev)=>!prev)}></Image>
         {open && (
-            <div className="absolute bg-green-400 left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center gap-8 text-xl z-10 justify-center">
+            <div className="absolute bg-black text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center gap-8 text-xl z-10 justify-center">
             <Link href='/'>Homepage</Link>
             <Link href='/'>Shop</Link>
             <Link href='/'>Deals</Link>
