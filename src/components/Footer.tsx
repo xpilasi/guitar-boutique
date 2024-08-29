@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import LogoToneRelics from '../components/widgets/LogoToneRelics';
 
 const Footer = () => {
   return (
@@ -13,10 +14,10 @@ const Footer = () => {
           <Link
           href='/'
           >
-            <div className='text-xl tracking-wide'>BOUTIQUE</div>
+            <LogoToneRelics/>
           </Link>
           <p className=''>Carrer del Acer 66</p>
-          <span className='font-semibold'>hello@gboutique.com</span>
+          <span className='font-semibold'>hello@gtonerelics.com</span>
           <span className='font-semibold'>+34 645 73 73</span>
           <div className='flex gap-6'>
             <Image src='/facebook.png' alt='' width={16} height={16}></Image>
@@ -83,7 +84,7 @@ const Footer = () => {
 
       </div>
       <div className='flex flex-col md:flex-row items-center justify-between gap-8 mt-16'> {/* BOTTOM */}
-        <div className=''>© 2024 Guitar-Boutique</div>
+        <div className=''>© 2024 Tonerelics</div>
         <div className=''>Delivery allowed for the EU</div>
         <div className=''>Website developed by xPilab</div>
         
