@@ -7,8 +7,8 @@ import Footer from "<gboutique>/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Boutique Guitar Pedals",
-  description: "Find exquisite Guitar Pedals to buy",
+  title: "Tonerelics - Guitar & Bass boutique",
+  description: "Find exquisite Guitar and Bass relics",
 };
 
 export default function RootLayout({

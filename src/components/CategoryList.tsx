@@ -19,7 +19,7 @@ const CategoryList = () => {
                       />
 
               </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Guitar Pedals</h1> 
+              <h1 className='mt-8 font-light text-xl tracking-widest  flex justify-center'>Guitar Pedals</h1> 
           </Link>
           <Link
               className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
@@ -34,7 +34,7 @@ const CategoryList = () => {
                       />
 
               </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Bass Pedals</h1> 
+              <h1 className='mt-8 font-light text-xl tracking-widest  flex justify-center'>Bass Pedals</h1> 
           </Link>
         <Link
               className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
@@ -49,7 +49,7 @@ const CategoryList = () => {
                       />
 
               </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Picks</h1> 
+              <h1 className='mt-8 font-light text-xl tracking-widest  flex justify-center'>Picks</h1> 
           </Link>
           <Link
               className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
@@ -64,7 +64,7 @@ const CategoryList = () => {
                       />
 
               </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Pedalboards</h1> 
+              <h1 className='mt-8 font-light text-xl tracking-widest  flex justify-center'>Pedalboards</h1> 
           </Link>
        
         
@@ -81,7 +81,7 @@ const CategoryList = () => {
                       />
 
               </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Guitar amplifiers</h1> 
+              <h1 className='mt-8 font-light text-xl tracking-widest  flex justify-center'>Guitar amplifiers</h1> 
           </Link>
         <Link
               className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
@@ -96,7 +96,7 @@ const CategoryList = () => {
                       />
 
               </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Bass amplifiers</h1> 
+              <h1 className='mt-8 font-light text-xl tracking-widest  flex justify-center'>Bass amplifiers</h1> 
           </Link>
         
         
