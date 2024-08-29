@@ -2,7 +2,20 @@ import React from 'react'
 
 const SinglePage = () => {
   return (
-    <div>SinglePage</div>
+    <div className=''>
+
+      <div className=''>{/* IMG */}
+    
+      </div> 
+
+      <div className=''>{/* TEXTS */}
+    
+      </div> 
+      
+
+
+
+    </div>
   )
 }
 

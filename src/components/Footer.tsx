@@ -6,7 +6,7 @@ import LogoToneRelics from '../components/widgets/LogoToneRelics';
 const Footer = () => {
   return (
 
-    <div className='py-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 bg-gray-100 text-sm mb-24'>
+    <div className='py-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 bg-gray-100 text-sm 4'>
 
       <div className='flex flex-col md:flex-row justify-between gap-24'> {/* TOP */}
         
