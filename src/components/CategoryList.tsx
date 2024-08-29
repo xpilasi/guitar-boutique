@@ -13,13 +13,28 @@ const CategoryList = () => {
               <div className='relative bg-slate-100 w-full h-96'>
                   <Image
                       className='object-cover rounded-md'
-                      src='https://images.pexels.com/photos/167491/pexels-photo-167491.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                      src='https://images.unsplash.com/photo-1614440455519-7d2d00f6a701?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                       alt=''
                       fill
                       />
 
               </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Category Name</h1> 
+              <h1 className='mt-8 font-light text-cl tracking-wide'>Guitar Pedals</h1> 
+          </Link>
+          <Link
+              className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
+              href='/list?cat=test'
+          >
+              <div className='relative bg-slate-100 w-full h-96'>
+                  <Image
+                      className='object-cover rounded-md'
+                      src='https://images.unsplash.com/photo-1634691054625-87910c581bb1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                      alt=''
+                      fill
+                      />
+
+              </div> 
+              <h1 className='mt-8 font-light text-cl tracking-wide'>Bass Pedals</h1> 
           </Link>
         <Link
               className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
@@ -28,13 +43,45 @@ const CategoryList = () => {
               <div className='relative bg-slate-100 w-full h-96'>
                   <Image
                       className='object-cover rounded-md'
-                      src='https://images.pexels.com/photos/4218027/pexels-photo-4218027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                      src='https://images.unsplash.com/photo-1621173404040-3d677039f33d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                       alt=''
                       fill
                       />
 
               </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Category Name</h1> 
+              <h1 className='mt-8 font-light text-cl tracking-wide'>Picks</h1> 
+          </Link>
+          <Link
+              className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
+              href='/list?cat=test'
+          >
+              <div className='relative bg-slate-100 w-full h-96'>
+                  <Image
+                      className='object-cover rounded-md'
+                      src='https://images.unsplash.com/photo-1615290642832-0e0995702507?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                      alt=''
+                      fill
+                      />
+
+              </div> 
+              <h1 className='mt-8 font-light text-cl tracking-wide'>Pedalboards</h1> 
+          </Link>
+       
+        
+        <Link
+              className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
+              href='/list?cat=test'
+          >
+              <div className='relative bg-slate-100 w-full h-96'>
+                  <Image
+                      className='object-cover rounded-md'
+                      src='https://images.unsplash.com/photo-1463134443644-45f4dc57a612?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                      alt=''
+                      fill
+                      />
+
+              </div> 
+              <h1 className='mt-8 font-light text-cl tracking-wide'>Guitar amplifiers</h1> 
           </Link>
         <Link
               className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
@@ -43,58 +90,13 @@ const CategoryList = () => {
               <div className='relative bg-slate-100 w-full h-96'>
                   <Image
                       className='object-cover rounded-md'
-                      src='https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                      src='https://images.unsplash.com/photo-1588599376442-3cbf9c67449e?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                       alt=''
                       fill
                       />
 
               </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Category Name</h1> 
-          </Link>
-        <Link
-              className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
-              href='/list?cat=test'
-          >
-              <div className='relative bg-slate-100 w-full h-96'>
-                  <Image
-                      className='object-cover rounded-md'
-                      src='https://images.pexels.com/photos/167491/pexels-photo-167491.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-                      alt=''
-                      fill
-                      />
-
-              </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Category Name</h1> 
-          </Link>
-        <Link
-              className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
-              href='/list?cat=test'
-          >
-              <div className='relative bg-slate-100 w-full h-96'>
-                  <Image
-                      className='object-cover rounded-md'
-                      src='https://images.pexels.com/photos/4218027/pexels-photo-4218027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-                      alt=''
-                      fill
-                      />
-
-              </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Category Name</h1> 
-          </Link>
-        <Link
-              className='flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/6'
-              href='/list?cat=test'
-          >
-              <div className='relative bg-slate-100 w-full h-96'>
-                  <Image
-                      className='object-cover rounded-md'
-                      src='https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-                      alt=''
-                      fill
-                      />
-
-              </div> 
-              <h1 className='mt-8 font-light text-cl tracking-wide'>Category Name</h1> 
+              <h1 className='mt-8 font-light text-cl tracking-wide'>Bass amplifiers</h1> 
           </Link>
         
         
