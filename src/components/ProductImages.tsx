@@ -1,8 +1,12 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 
 const images = [
+
+    
     {
     id: 1,
     url: 'https://images.unsplash.com/photo-1614440401656-400a12f79b78?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -25,30 +29,41 @@ const images = [
 },
 ]
 const ProductImages = () => {
+
+    const [index,setIndex] = useState(0);
+
   return (
     <div className=''>
         <div className='h-[500px] relative'>
         <Image
                 className='object-cover rounded-md'
-                src='https://images.unsplash.com/photo-1614440401703-b55a9aead7a3?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                src={images[index].url}
                 alt=''
                 fill
                 sizes='50vw'
             ></Image>
 
         </div>
-        <div className=''>
-            <div className='w-1/4 h-32 relative gap-8 '>
-  
-                <Image
-                className='object-cover rounded-md'
-                src='https://images.unsplash.com/photo-1614440401703-b55a9aead7a3?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                alt=''
-                fill
-                sizes='30vw'
-            ></Image>
+        <div className='flex justify-between gap-4 mt-12'>
+            {images.map((img,index)=>(
+                <div 
+                className='w-1/4 h-32 relative gap-4 mt-8 cursor-pointer'
+                key={img.id}
+                onClick={()=> setIndex(index) }
+                >
+                    <Image
+                        className='object-cover rounded-md'
+                        src={img.url}
+                        alt=''
+                        fill
+                        sizes='30vw'
+
+
+                    />       
+                </div>
+            ))}
             
-            </div>
+        
             
         
        
