@@ -7,29 +7,30 @@ import Image from 'next/image';
 const slides = [
     {
         id: 1,
-        title: 'Marshall V12',
+        title: 'Monster Pedal',
+        description: 'Awesome Tesla Overdrive',
+        img:'https://images.unsplash.com/photo-1646396148893-2ee7406d535f?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        url:'/',
+        bg:'bg-gradient-to-r from-green-50 to-purple-50'
+
+    },
+    {
+        id: 2,
+        title: 'Kinematic 4T',
         description: 'New arrivals',
         img:'https://images.unsplash.com/photo-1627116484935-72ff154acaf4?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         url:'/',
         bg:'bg-gradient-to-r from-yellow-50 to-pink-50'
 
     },
-    {
-        id: 2,
-        title: 'Monster Pedal',
-        description: 'Awesome Tesla Overdrive',
-        img:'https://images.unsplash.com/photo-1662261896010-06131f684139?q=80&w=1403&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        url:'/',
-        bg:'bg-gradient-to-r from-green-50 to-purple-50'
-
-    },
+    
     {
         id: 3,
-        title: 'Get it Now',
-        description: 'Great Bass',
-        img:'https://images.unsplash.com/photo-1614440401589-488fd69a3f8a?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        title: 'Get it now',
+        description: 'Joyo Band Cont',
+        img:'https://images.unsplash.com/photo-1621173425971-51ea80bf1b63?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGd1aXRhciUyMHBlZGFsfGVufDB8fDB8fHww',
         url:'/',
-        bg:'bg-gradient-to-r from-blue-700 to-black-50'
+        bg:'bg-gradient-to-r from-pink-50 to-red-50'
 
     },
 ]
