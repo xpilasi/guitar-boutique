@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "<gboutique>/components/NavBar";
 import Footer from "<gboutique>/components/Footer";
+import { WixClienteContextProvider } from "<gboutique>/context/wixContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <WixClienteContextProvider>
         <NavBar></NavBar>
         {children}
         <Footer></Footer>
+        </WixClienteContextProvider>
         </body>
     </html>
   );
