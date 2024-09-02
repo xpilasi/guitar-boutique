@@ -34,7 +34,8 @@ const ProductImages = () => {
 
   return (
     <div className=''>
-        <div className='h-[500px] relative'>
+       
+        <div className='h-[500px] relative'> {/* Big Image */}
         <Image
                 className='object-cover rounded-md'
                 src={images[index].url}
@@ -44,7 +45,7 @@ const ProductImages = () => {
             ></Image>
 
         </div>
-        <div className='flex justify-between gap-4 mt-12'>
+        <div className='flex justify-between gap-4 mt-12'> {/* Small Images (map) */}
             {images.map((img,index)=>(
                 <div 
                 className='w-1/4 h-32 relative gap-4 mt-8 cursor-pointer'
@@ -62,11 +63,6 @@ const ProductImages = () => {
                     />       
                 </div>
             ))}
-            
-        
-            
-        
-       
         </div>
         
             
