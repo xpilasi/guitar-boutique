@@ -4,7 +4,7 @@ import "./globals.css";
 import NavBar from "<gboutique>/components/NavBar";
 import Footer from "<gboutique>/components/Footer";
 import { WixClienteContextProvider } from "<gboutique>/context/wixContext";
-
+export const dynamic = 'force-dynamic';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

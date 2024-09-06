@@ -23,6 +23,9 @@ const res = await wixClient.products
                     .limit(limit || PRODUCT_PER_PAGE)
                     .find();
 
+           console.log(res);
+                    
+
   return (
     <div className=' mt-12 flex gap-x-8 gap-y-16 justify-between flex-wrap '>
         {res.items.map((product:products.Product)=>(
@@ -34,7 +37,7 @@ const res = await wixClient.products
                 <div className='relative w-full h-80 '>
                 <Image
                 className='absolute object-cover rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500'
-                src={product.media?.mainMedia?.image?.url || 'product.png'}
+                src={product.media?.mainMedia?.image?.url || '/product.png'}
                 alt=''
                 fill
                 sizes='25vw'
@@ -43,7 +46,7 @@ const res = await wixClient.products
             {product.media?.items && 
                 <Image
                 className='absolute object-cover rounded-md'
-                src={product.media?.items[1]?.image?.url || 'product.png'}
+                src={product.media?.items[1]?.image?.url || '/product.png'}
                 alt=''
                 fill
                 sizes='25vw'

@@ -35,7 +35,7 @@ const wixClient = await wixClientServer();
 const res = await wixClient.products.queryProducts().find();
 console.log('test');
 
-console.log(res);
+// console.log(res);
  
   return (
     <div className=''>
