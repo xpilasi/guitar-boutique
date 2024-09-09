@@ -9,10 +9,12 @@ const PRODUCT_PER_PAGE = 20;
 const ProductList = async (
     {
         categoryId,
-        limit
+        limit,
+        searchParams,
     }:{
         categoryId?:string; 
-        limit?:number
+        limit?:number,
+        searchParams?:any
     }
 ) => {
 
@@ -27,7 +29,7 @@ const res = await wixClient.products
                     
 
   return (
-    <div className=' mt-12 flex gap-x-8 gap-y-16 justify-between flex-wrap '>
+    <div className=' mt-12 flex gap-x-8 gap-y-16 justify-between flex-wrap'>
         {res.items.map((product:products.Product)=>(
 
             <Link
@@ -35,24 +37,32 @@ const res = await wixClient.products
             key={product._id}
             href={'/'+product.slug}>
                 <div className='relative w-full h-80 '>
-                <Image
-                className='absolute object-cover rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500'
-                src={product.media?.mainMedia?.image?.url || '/product.png'}
-                alt=''
-                fill
-                sizes='25vw'
-            />
-            
-            {product.media?.items && 
-                <Image
-                className='absolute object-cover rounded-md'
-                src={product.media?.items[1]?.image?.url || '/product.png'}
-                alt=''
-                fill
-                sizes='25vw'
-                />
-            }
-                </div>
+                   
+                
+
+                     <Image
+                        className='py-0 absolute object-cover rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500'
+                        src={product.media?.mainMedia?.image?.url || '/product.png'}
+                        alt=''
+                        fill
+                        
+                        sizes='100vw'
+                    />
+                     
+                    
+                    
+                    {product.media?.items && 
+                        <Image
+                        className='  absolute object-cover rounded-md'
+                        src={product.media?.items[1]?.image?.url || '/product.png'}
+                        alt=''
+                        fill
+                        sizes='100vw'
+                        />
+                    }
+                   
+                   </div>  
+                
                 
                 <div className='flex justify-between'>
                     <span className='font-medium'>{product.name}</span>

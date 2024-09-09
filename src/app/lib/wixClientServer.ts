@@ -3,13 +3,14 @@ import { products, collections } from "@wix/stores";
 import { cookies } from "next/headers";
 
 export const wixClientServer = async ()=>{
-
+    let error='🚩';
     let refreshToken;
     try{
         const cookieStore = cookies();
         refreshToken = JSON.parse(cookieStore.get('refreshToken')?.value || '{}') 
     }catch(e){
-    console.log(e);
+      
+    console.log(`ERROR ${error} --> \n ${e}`);
     
     }
     

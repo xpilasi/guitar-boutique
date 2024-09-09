@@ -2,8 +2,16 @@ import React from 'react';
 import Image from 'next/image';
 import Filter from '<gboutique>/components/Filter';
 import ProductList from '<gboutique>/components/ProductList';
+import { wixClientServer } from '../lib/wixClientServer';
+import { Suspense } from 'react';
 
-const ListPage = () => {
+const ListPage = async ({searchParams}:{searchParams:any}) => {
+
+  const wixClient = await wixClientServer();
+
+
+  const category = await wixClient.collections.getCollectionBySlug(searchParams.cat || 'all-products')
+  console.log(category);
   return (
     <div className='px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 relative pb-10'>
 
@@ -29,7 +37,13 @@ const ListPage = () => {
       </div>
 
       <div className='mt-12'>{/* PRODUCTS */}
-        <ProductList/>
+        <Suspense fallback='LOADING DUDE...'>
+            <ProductList 
+            categoryId={category.collection?._id || '00000000-000000-000000-000000000001'}
+            searchParams={searchParams}
+            /> 
+        </Suspense>
+      
       </div>
 
     </div>
