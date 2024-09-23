@@ -1,6 +1,7 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { products } from '@wix/stores';
+import Add from './Add';
 
 const CustomizeProducts = ({
   productId,
@@ -13,16 +14,46 @@ const CustomizeProducts = ({
 }) => {
 
   const [selectedOptions,setSelectedOptions] = useState <{[key:string]:string}>({});
+  const [selectedVariant,setSelectedVariant] =useState<products.Variant>(); 
+  // const [newVariants,setNewVariants] = useState<boolean>(true);
+
+  //Whenever the selectedOptions change update:
+  const newVariants =  true;
+  useEffect(()=>{
+    console.log(variants)
+    console.log('test');
+    console.log(`New variants: ${newVariants}`);
+    
+    
+    
+    const variant = variants.find((v =>{
+      const variantChoices = v.choices;
+      // console.log(variantChoices);
+      !variantChoices ? console.log('FALSE'):console.log('TRUE');
+      ;
+      
+    
+      if(!variantChoices)
+      return false;
+      return Object.entries(selectedOptions).every(
+        ([key,value])=>variantChoices[key] === value
+      );
+    }));
+
+    setSelectedVariant(variant);
+
+  },[selectedOptions,variants])
 
   const handleOptionsSelect = (optionType : string, choice: string)=>{
     setSelectedOptions((prev) =>({...prev,[optionType]:choice}))
   }
-  // console.log(variants);
+  ;
   
-  //Me devuelve el stock de la variante:
+  //Me devuelve el stock de la variante (Boolean):
   const isVariantInStock = (choices:{[key:string]:string}) => {
 
     //Verifico si al menos 1 variant cumple con la condición (combinación de choices)
+    //.some devuelve TRUE o FALSE
     return variants.some((variant)=>{
       const variantChoices = variant.choices;
 
@@ -42,7 +73,7 @@ const CustomizeProducts = ({
     } ) 
   }
 
-  console.log(selectedOptions);
+  ;
   
   return (
     <div className='flex flex-col gap-6'>
@@ -52,19 +83,23 @@ const CustomizeProducts = ({
           <ul className='flex items-center gap-3'>
           {option.choices?.map(choice=>
             {
-
+              
+              //If stock is false disabled is TRUE
               const disabled = !isVariantInStock({
                 ...selectedOptions,
                 [option.name!]:choice.description!,
               });
 
+
               const selected = selectedOptions[option.name!] === choice.description;
 
               const clickHandler = disabled 
-                                    ? undefined 
+                                    ? undefined //if disabled is TRUE
                                     : ()=>handleOptionsSelect(option.name!,choice.description!);
               
-              return option.name === 'Color' ? (
+              return option.name === 'Color' //if the
+              
+                ? (
                 // Color
                 <li  
                   className='w-8 h-8 rounded-full ring-1 ring-gray-300 relative ' 
@@ -75,6 +110,7 @@ const CustomizeProducts = ({
                   {disabled && <div className='absolute w-10 h-[2px] bg-red-400 rotate-45 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'></div>}
                 </li>
               ) : (
+
                 // Size
                 <li 
                   className='ring-1 ring-red-300 rounded-md text-red-300 py-1 px-4 text-sm '
@@ -99,7 +135,12 @@ const CustomizeProducts = ({
             
       ))   
         
-}
+}<Add 
+  productId={productId} 
+  variantId={selectedVariant?._id || '00000000-000000-000000-000000000000'} 
+  stockNumber={selectedVariant?.stock?.quantity || 0}
+  resetQty={newVariants}
+  />
 {/* 
             
             

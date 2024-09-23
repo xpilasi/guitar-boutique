@@ -23,7 +23,7 @@ const SinglePage = async ({params}:{params:{slug: string}}) => {
  
 
  const product = products.items[0];
- console.log(product.productOptions);
+//  console.log(product.productOptions);
  
                         
   return (
@@ -54,7 +54,8 @@ const SinglePage = async ({params}:{params:{slug: string}}) => {
 
         {/* Si hay opciones, entonces muéstralas: */}
         {
-          product.variants && product.productOptions && (
+          product.variants && product.productOptions 
+          ? (
 
             <CustomizeProducts 
                     productId={product._id!}
@@ -62,10 +63,13 @@ const SinglePage = async ({params}:{params:{slug: string}}) => {
                     productOptions={product.productOptions}
             />
           )
+          :(
+
+            <Add productId={product._id!} variantId='00000000-000000-000000-000000000000' stockNumber={product.stock?.quantity || 0 }/>
+          )
 
         }
         
-        <Add/>
         <div className='h-[2px] bg-gray-100'></div>{/* Línea divisoria */}
 
           {product.additionalInfoSections?.map((section:any)=>(
