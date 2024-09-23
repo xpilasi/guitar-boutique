@@ -19,18 +19,42 @@ const ProductList = async (
 ) => {
 
 const wixClient = await wixClientServer();
-const res = await wixClient.products
+
+//These are filters
+const productQuery = wixClient.products
                     .queryProducts()
                     .startsWith('name',searchParams?.name || '')
                     .eq('collectionIds',categoryId)
                     .hasSome('productType',searchParams?.type?[searchParams.type]:['physical','digital'])
                     .gt('priceData.price',searchParams?.min || 0)
                     .lt('priceData.price',searchParams?.max || 999999)
-                    .limit(limit || PRODUCT_PER_PAGE)
-                    .find();
+                    .limit(limit || PRODUCT_PER_PAGE);
+                    // .find();
+       
+           
+           
 
-           console.log(res);
-                    
+    if(searchParams?.sort){
+       
+        
+        const [sortType, sortBy] = searchParams.sort.split(' ');
+
+        if(sortType === 'asc'){
+            console.log('ASC ---TEST ');
+            
+            productQuery.ascending(sortBy);
+            console.log(productQuery.ascending(sortBy));
+            
+        }
+        if(sortType === 'desc'){
+            console.log('DESC');
+            productQuery.descending(sortBy);
+        }
+    }else{
+        'ERROREEEEES'
+    }
+//find() is a promise
+const res = await productQuery.find();
 
   return (
     <div className=' mt-12 flex gap-x-8 gap-y-16 justify-between flex-wrap'>

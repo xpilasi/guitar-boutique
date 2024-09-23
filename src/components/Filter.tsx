@@ -90,10 +90,10 @@ const Filter = () => {
             onChange={handleFilterChange}
             >
                 <option>Sort By</option>
-                <option value="price-low-to-high">Price (low to high)</option>
-                <option value="price-low-to-high">Price (high to low)</option>
-                <option value="product-newest">Product (Newest)</option>
-                <option value="product-oldest">Product (Oldest)</option>
+                <option value="asc price">Price (low to high)</option>
+                <option value="desc price">Price (high to low)</option>
+                <option value="asc lastUpdated">Product (Newest)</option>
+                <option value="desc lastUpdated">Product (Oldest)</option>
                 
             </select>
         </div>
